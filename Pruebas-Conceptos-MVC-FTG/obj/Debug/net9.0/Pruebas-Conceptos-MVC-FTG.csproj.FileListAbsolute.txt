@@ -173,3 +173,4 @@
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.sourcelink.json

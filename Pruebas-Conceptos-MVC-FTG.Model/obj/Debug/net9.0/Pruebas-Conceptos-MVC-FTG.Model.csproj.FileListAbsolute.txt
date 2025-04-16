@@ -9,3 +9,4 @@
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/refint/Pruebas-Conceptos-MVC-FTG.Model.dll
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.sourcelink.json
