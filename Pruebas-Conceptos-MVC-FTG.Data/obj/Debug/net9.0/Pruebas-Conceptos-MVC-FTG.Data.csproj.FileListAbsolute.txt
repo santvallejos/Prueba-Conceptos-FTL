@@ -16,3 +16,21 @@
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.genruntimeconfig.cache
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.Data.dll
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.sourcelink.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.deps.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.runtimeconfig.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.pdb
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.csproj.AssemblyReference.cache
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.AssemblyInfoInputs.cache
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.AssemblyInfo.cs
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.csproj.CoreCompileInputs.cache
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.sourcelink.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-.7F227FED.Up2Date
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/refint/Pruebas-Conceptos-MVC-FTG.Data.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.pdb
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.genruntimeconfig.cache
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Data/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.Data.dll

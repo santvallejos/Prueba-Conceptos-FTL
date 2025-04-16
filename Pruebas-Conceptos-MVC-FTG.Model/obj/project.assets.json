@@ -8,25 +8,24 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/soficubilla/.nuget/packages/": {}
+    "/Users/rodrigopacheco/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/Pruebas-Conceptos-MVC-FTG.Model.csproj",
+      "projectUniqueName": "/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/Pruebas-Conceptos-MVC-FTG.Model.csproj",
       "projectName": "Pruebas-Conceptos-MVC-FTG.Model",
-      "projectPath": "/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/Pruebas-Conceptos-MVC-FTG.Model.csproj",
-      "packagesPath": "/Users/soficubilla/.nuget/packages/",
-      "outputPath": "/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/",
+      "projectPath": "/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/Pruebas-Conceptos-MVC-FTG.Model.csproj",
+      "packagesPath": "/Users/rodrigopacheco/.nuget/packages/",
+      "outputPath": "/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/soficubilla/.nuget/NuGet/NuGet.Config"
+        "/Users/rodrigopacheco/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -45,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -66,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

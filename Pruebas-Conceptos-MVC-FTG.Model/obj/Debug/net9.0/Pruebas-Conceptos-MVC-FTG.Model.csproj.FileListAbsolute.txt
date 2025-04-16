@@ -10,3 +10,15 @@
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.Model.dll
 /Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.sourcelink.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.deps.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.AssemblyInfoInputs.cache
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.AssemblyInfo.cs
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.csproj.CoreCompileInputs.cache
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.sourcelink.json
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/refint/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.Model.dll
