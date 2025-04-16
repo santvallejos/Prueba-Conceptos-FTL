@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prueba-Conceptos-MVC-FTG", "Prueba-Conceptos-MVC-FTG\Prueba-Conceptos-MVC-FTG.csproj", "{CBA3B32C-A774-4D93-99E4-B986E23CCB00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas-Conceptos-MVC-FTG", "Pruebas-Conceptos-MVC-FTG\Pruebas-Conceptos-MVC-FTG.csproj", "{142AC311-1E2C-467E-927C-2CFDD2FAC54B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas-Conceptos-MVC-FTG.Data", "Pruebas-Conceptos-MVC-FTG.Data\Pruebas-Conceptos-MVC-FTG.Data.csproj", "{AC70A289-33EB-4AE4-9AB8-923E0E5DF1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas-Conceptos-MVC-FTG.Model", "Pruebas-Conceptos-MVC-FTG.Model\Pruebas-Conceptos-MVC-FTG.Model.csproj", "{AED2D000-3A16-44CC-ABBC-A1B9081402D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC70A289-33EB-4AE4-9AB8-923E0E5DF1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC70A289-33EB-4AE4-9AB8-923E0E5DF1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC70A289-33EB-4AE4-9AB8-923E0E5DF1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC70A289-33EB-4AE4-9AB8-923E0E5DF1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

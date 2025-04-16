@@ -1,0 +1,11 @@
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.AssemblyInfoInputs.cache
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.AssemblyInfo.cs
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.csproj.CoreCompileInputs.cache
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.deps.json
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/refint/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
+/Users/soficubilla/Documents/Projects/Dotnet/Foo talent group/Pruebas-Conceptos-MVC-FTG.Model/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.Model.dll
