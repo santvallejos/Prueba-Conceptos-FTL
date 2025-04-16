@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pruebas-Conceptos-MVC-FTG.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07baa4df7e82a3f2b8697dd039a394a24e33c3c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e54f27d73fdec38fb6ab15b8e352f6646f021ab8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pruebas-Conceptos-MVC-FTG.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pruebas-Conceptos-MVC-FTG.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
