@@ -385,3 +385,4 @@
 /Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.pdb
 /Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.genruntimeconfig.cache
 /Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net9.0/ref/Pruebas-Conceptos-MVC-FTG.dll
+/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/bin/Debug/net9.0/global.json
