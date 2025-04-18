@@ -10,9 +10,7 @@ builder.Services.AddControllersWithViews();
 
 // Add database context
 builder.Services.AddDbContext<Pruebas_Conceptos_MVC_FTG_DbContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
-        );
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add Swagger to the container
 builder.Services.AddSwaggerGen(c =>
