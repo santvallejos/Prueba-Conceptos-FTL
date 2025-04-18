@@ -1,6 +1,7 @@
 # Ignorar carpetas de compilación
 **/bin/
 **/obj/
+**/Debug/
 
 # Archivos y carpetas de configuración de Visual Studio
 .vs/

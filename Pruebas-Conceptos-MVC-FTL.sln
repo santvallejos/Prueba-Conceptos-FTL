@@ -9,19 +9,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas-Conceptos-MVC-FTG.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas-Conceptos-MVC-FTG.Model", "Pruebas-Conceptos-MVC-FTG.Model\Pruebas-Conceptos-MVC-FTG.Model.csproj", "{AED2D000-3A16-44CC-ABBC-A1B9081402D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBA3B32C-A774-4D93-99E4-B986E23CCB00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{142AC311-1E2C-467E-927C-2CFDD2FAC54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,5 +32,11 @@ Global
 		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AED2D000-3A16-44CC-ABBC-A1B9081402D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC11FA73-E525-4079-B4E7-4DD7CC1B4292}
 	EndGlobalSection
 EndGlobal
