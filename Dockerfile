@@ -18,12 +18,11 @@ RUN dotnet restore "Pruebas-Conceptos-MVC-FTG/Pruebas-Conceptos-MVC-FTG.csproj"
 COPY . .
 WORKDIR "/src/Pruebas-Conceptos-MVC-FTG"
 
-# Compilar y publicar con AOT
-RUN dotnet publish "Pruebas-Conceptos-MVC-FTG.csproj" \
+# Build y publicación normal sin AOT
+RUN dotnet publish "Pruebas-Conceptos-FTG.csproj" \
     -c $BUILD_CONFIGURATION \
     -r linux-x64 \
     --self-contained true \
-    -p:PublishAot=true \
     -o /app/publish
 
 # Imagen final
