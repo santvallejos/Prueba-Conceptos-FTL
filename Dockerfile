@@ -19,7 +19,7 @@ COPY . .
 WORKDIR "/src/Pruebas-Conceptos-MVC-FTG"
 
 # Build y publicación normal sin AOT
-RUN dotnet publish "Pruebas-Conceptos-FTG.csproj" \
+RUN dotnet publish "Pruebas-Conceptos-MVC-FTG.csproj" \
     -c $BUILD_CONFIGURATION \
     -r linux-x64 \
     --self-contained true \
