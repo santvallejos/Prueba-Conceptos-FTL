@@ -11,12 +11,12 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copiar solo el archivo .csproj y restaurar dependencias
-COPY ["Pruebas-Conceptos-FTL/Pruebas-Conceptos-FTG.csproj", "Pruebas-Conceptos-FTL/"]
-RUN dotnet restore "Pruebas-Conceptos-FTL/Pruebas-Conceptos-FTG.csproj"
+COPY ["Pruebas-Conceptos-FTG/Pruebas-Conceptos-FTG.csproj", "Pruebas-Conceptos-FTL/"]
+RUN dotnet restore "Pruebas-Conceptos-FTG/Pruebas-Conceptos-FTG.csproj"
 
 # Copiar el resto del código fuente
 COPY . .
-WORKDIR "/src/Pruebas-Conceptos-FTL"
+WORKDIR "/src/Pruebas-Conceptos-FTG"
 
 # Build y publicación con AOT
 RUN dotnet publish "Pruebas-Conceptos-FTG.csproj" \
