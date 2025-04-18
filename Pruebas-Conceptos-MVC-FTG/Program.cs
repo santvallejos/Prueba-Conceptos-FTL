@@ -1,5 +1,7 @@
 using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,16 @@ builder.Services.AddDbContext<Pruebas_Conceptos_MVC_FTG_DbContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection")))
         );
 
+// Add Swagger to the container
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
+    // Optional: Include XML comments for better documentation
+    //var xmlFile = $"{System.AppDomain.CurrentDomain.FriendlyName}.xml";
+    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    //c.IncludeXmlComments(xmlPath);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +36,16 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger(); // Enable Swagger
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestión de pacientes API"); // Swagger UI endpoint
+        c.RoutePrefix = string.Empty; // Make Swagger UI available at the root
+    });
+}
 
 app.UseAuthorization();
 
