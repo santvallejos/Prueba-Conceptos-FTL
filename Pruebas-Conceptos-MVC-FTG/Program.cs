@@ -35,15 +35,12 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger(); // Enable Swagger
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestión de pacientes API"); // Swagger UI endpoint
-        c.RoutePrefix = string.Empty; // Make Swagger UI available at the root
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestión de pacientes API");
+    c.RoutePrefix = string.Empty;
+});
 
 app.UseAuthorization();
 
