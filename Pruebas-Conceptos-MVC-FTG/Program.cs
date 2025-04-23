@@ -1,7 +1,11 @@
 using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Pruebas_Conceptos_MVC_FTG.Model.Models;
 
+// Add the following using directive at the top of the file to resolve the 'AddDbContext' method.
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,13 +19,14 @@ builder.Services.AddDbContext<Pruebas_Conceptos_MVC_FTG_DbContext>(options =>
 // Add Swagger to the container
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+  c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 
-    // Optional: Include XML comments for better documentation
-    //var xmlFile = $"{System.AppDomain.CurrentDomain.FriendlyName}.xml";
-    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    //c.IncludeXmlComments(xmlPath);
+  // Optional: Include XML comments for better documentation
+  // var xmlFile = $"{System.AppDomain.CurrentDomain.FriendlyName}.xml";
+  // var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+  // c.IncludeXmlComments(xmlPath);
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -44,13 +49,12 @@ app.UseSwaggerUI(c =>
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
+// Ensure database is created
 try
 {
   using (var scope = app.Services.CreateScope())
@@ -64,5 +68,26 @@ catch (Exception ex)
 {
   Console.WriteLine($"❌ Error al conectar con la base de datos: {ex.Message}");
 }
+
+// Example usage of the Usuario class
+var usuario = new Usuario(1, "Rodrigo", "rodrigo@example.com", "secreta123");
+
+// Verificar contraseña correcta
+bool accesoPermitido = usuario.VerificarContrasena("secreta123");
+Console.WriteLine($"¿Acceso permitido? {accesoPermitido}");
+
+// Verificar contraseña incorrecta
+bool accesoDenegado = usuario.VerificarContrasena("contraseñaIncorrecta");
+Console.WriteLine($"¿Acceso permitido? {accesoDenegado}");
+
+// Mostrar información del usuario
+Console.WriteLine($"Nombre: {usuario.Nombre}");
+Console.WriteLine($"Correo: {usuario.Correo}");
+Console.WriteLine($"Creado en: {usuario.FechaCreacion}");
+Console.WriteLine($"Último acceso: {usuario.FechaUltimoAcceso}");
+
+// Actualizar último acceso y mostrarlo
+usuario.ActualizarUltimoAcceso();
+Console.WriteLine($"Último acceso actualizado: {usuario.FechaUltimoAcceso}");
 
 app.Run();
