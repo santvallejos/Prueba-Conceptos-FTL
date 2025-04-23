@@ -8,10 +8,6 @@
 *.user
 *.suo
 
-# Archivos de usuario de soluciones y proyectos
-*.userosscache
-*.sln.docstates
-
 # Archivos generados automáticamente por MSBuild
 *.GeneratedMSBuildEditorConfig.editorconfig
 *.AssemblyReference.cache
@@ -25,11 +21,5 @@
 *.dbmdl
 *.pdb
 
-# Ignorar carpetas y archivos de test auto-generados (si aplica)
+# Ignorar carpetas y archivos de test auto-generados
 TestResults/
-/node_modules
-/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.deps.json
-/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.dll
-/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.pdb
-/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
-/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb
