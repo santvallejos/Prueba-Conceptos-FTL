@@ -6,11 +6,16 @@ using Pruebas_Conceptos_MVC_FTG.Model.Models;
 // Add the following using directive at the top of the file to resolve the 'AddDbContext' method.
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using Pruebas_Conceptos_MVC_FTG.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
+    });
 
 // Add database context
 builder.Services.AddDbContext<Pruebas_Conceptos_MVC_FTG_DbContext>(options =>
