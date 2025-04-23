@@ -2,11 +2,12 @@ using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Pruebas_Conceptos_MVC_FTG.Model.Models;
+using Pruebas_Conceptos_MVC_FTG.Utils;
 
 // Add the following using directive at the top of the file to resolve the 'AddDbContext' method.
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using Pruebas_Conceptos_MVC_FTG.Utils;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

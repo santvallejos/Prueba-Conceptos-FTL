@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
 using Pruebas_Conceptos_MVC_FTG.Models;
+using System.Text.Json;
+using Pruebas_Conceptos_MVC_FTG.Utils;
 
 namespace Pruebas_Conceptos_MVC_FTG.Controllers
 {
@@ -103,20 +105,71 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
         {
             if (id != pacienteActualizado.Id)
             {
-                return BadRequest("El ID del paciente no coincide.");
+                return BadRequest("El ID del paciente en la URL no coincide con el ID del cuerpo de la solicitud.");
             }
+
+            var pacienteExistente = await _context.Pacientes.FindAsync(id);
+            if (pacienteExistente == null)
+            {
+                return NotFound("Paciente no encontrado.");
+            }
+
+            // Aquí se podría realizar la lógica para actualizar los campos específicos
+            pacienteExistente.Name = pacienteActualizado.Name;
+            pacienteExistente.Surname = pacienteActualizado.Surname;
+            pacienteExistente.Birthdate = pacienteActualizado.Birthdate;
+            pacienteExistente.Identification = pacienteActualizado.Identification;
+            pacienteExistente.Diagnosis = pacienteActualizado.Diagnosis;
+            pacienteExistente.Institution = pacienteActualizado.Institution;
 
             try
             {
-                _context.Entry(pacienteActualizado).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
-                return NoContent();
+                return NoContent(); // Devuelve un código 204 si la actualización es exitosa
             }
+
             catch (Exception ex)
             {
                 return BadRequest($"Error al actualizar el paciente: {ex.Message}");
             }
         }
+
+        /// <summary>
+        /// Actualiza parcialmente la información de un paciente existente.
+        /// </summary>
+        /// <param name="id">ID del paciente a actualizar.</param>
+        /// <param name="camposActualizados">Campos a modificar.</param>
+        /// <returns>Paciente actualizado o mensaje de error.</returns>
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchPaciente(int id, [FromBody] JsonElement camposActualizados)
+        {
+            var pacienteExistente = await _context.Pacientes.FindAsync(id);
+            if (pacienteExistente == null)
+            {
+                return NotFound("Paciente no encontrado.");
+            }
+
+            try
+            {
+                // Deserializar parcialmente los datos al objeto existente
+                var pacienteJson = JsonSerializer.Serialize(pacienteExistente);
+                var docOriginal = JsonDocument.Parse(pacienteJson);
+                var objMerged = JsonUtils.MergeJson(docOriginal.RootElement, camposActualizados);
+
+                var pacienteModificado = JsonSerializer.Deserialize<Paciente>(objMerged.ToString());
+
+                // Actualizar los campos en el paciente existente
+                _context.Entry(pacienteExistente).CurrentValues.SetValues(pacienteModificado);
+                await _context.SaveChangesAsync();
+
+                return Ok(pacienteExistente);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error al actualizar parcialmente el paciente: {ex.Message}");
+            }
+        }
+
 
         /// <summary>
         /// Elimina un paciente de la base de datos.
