@@ -27,10 +27,10 @@ builder.Services.AddSwaggerGen(c =>
 {
   c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 
-  // Optional: Include XML comments for better documentation
-  // var xmlFile = $"{System.AppDomain.CurrentDomain.FriendlyName}.xml";
-  // var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-  // c.IncludeXmlComments(xmlPath);
+  //Include XML comments for better documentation
+   var xmlFile = $"{System.AppDomain.CurrentDomain.FriendlyName}.xml";
+   var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+   c.IncludeXmlComments(xmlPath);
 });
 
 var app = builder.Build();

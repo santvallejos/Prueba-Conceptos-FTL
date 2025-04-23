@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Pruebas_Conceptos_MVC_FTG.Models;
 using System.Text.Json;
 using Pruebas_Conceptos_MVC_FTG.Utils;
+using System.ComponentModel.DataAnnotations;
 
 namespace Pruebas_Conceptos_MVC_FTG.Controllers
 {
@@ -48,9 +49,20 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePaciente([FromBody] Paciente nuevoPaciente)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (nuevoPaciente == null)
             {
                 return BadRequest("El paciente no puede ser nulo.");
+            }
+
+            // Si no se envió fecha de ingreso, se asigna automáticamente
+            if (nuevoPaciente.AdmissionDate == default)
+            {
+                nuevoPaciente.AdmissionDate = DateTime.UtcNow;
             }
 
             try
@@ -95,14 +107,43 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
         }
 
         /// <summary>
-        /// Actualiza la información de un paciente existente.
+        /// Reemplaza completamente los datos de un paciente existente.
         /// </summary>
         /// <param name="id">ID del paciente a actualizar.</param>
         /// <param name="pacienteActualizado">Nuevo estado del paciente.</param>
         /// <returns>Respuesta HTTP indicando el éxito o error de la actualización.</returns>
+        /// <remarks>
+        /// Este endpoint reemplaza toda la información del paciente.
+        /// Es importante enviar todos los campos completos, incluyendo el ID en el cuerpo.
+        ///
+        /// Ejemplo de solicitud:
+        ///
+        ///     PUT /api/1
+        ///     {
+        ///         "id": 1,
+        ///         "name": "Juan",
+        ///         "surname": "Pérez",
+        ///         "birthdate": "2015-04-10T00:00:00",
+        ///         "identification": 12345,
+        ///         "diagnosis": "TDAH",
+        ///         "institution": "Escuela 23",
+        ///         "age": 9,
+        ///         "sex": "Masculino",
+        ///         "email": "juan.perez@mail.com",
+        ///         "phone": "099123456",
+        ///         "modality": "Presencial",
+        ///         "admissionDate": "2023-03-01T10:00:00"
+        ///     }
+        /// </remarks>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePaciente(int id, [FromBody] Paciente pacienteActualizado)
         {
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (id != pacienteActualizado.Id)
             {
                 return BadRequest("El ID del paciente en la URL no coincide con el ID del cuerpo de la solicitud.");
@@ -140,6 +181,18 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
         /// <param name="id">ID del paciente a actualizar.</param>
         /// <param name="camposActualizados">Campos a modificar.</param>
         /// <returns>Paciente actualizado o mensaje de error.</returns>
+        /// <remarks>
+        /// Este endpoint permite actualizar solo los campos deseados.
+        /// No es necesario enviar el objeto completo.
+        ///
+        /// Ejemplo de solicitud:
+        ///
+        ///     PATCH /api/1
+        ///     {
+        ///         "phone": "099888777",
+        ///         "diagnosis": "Ansiedad leve"
+        ///     }
+        /// </remarks>
         [HttpPatch("{id}")]
         public async Task<IActionResult> PatchPaciente(int id, [FromBody] JsonElement camposActualizados)
         {
@@ -158,7 +211,15 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
 
                 var pacienteModificado = JsonSerializer.Deserialize<Paciente>(objMerged.ToString());
 
-                // Actualizar los campos en el paciente existente
+                // Validación manual del modelo PATCH
+                var context = new ValidationContext(pacienteModificado, serviceProvider: null, items: null);
+                var results = new List<ValidationResult>();
+
+                if (!Validator.TryValidateObject(pacienteModificado, context, results, true))
+                {
+                    return BadRequest(results);
+                }
+
                 _context.Entry(pacienteExistente).CurrentValues.SetValues(pacienteModificado);
                 await _context.SaveChangesAsync();
 
