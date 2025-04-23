@@ -27,3 +27,9 @@
 
 # Ignorar carpetas y archivos de test auto-generados (si aplica)
 TestResults/
+/node_modules
+/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.deps.json
+/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.dll
+/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Data.pdb
+/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.dll
+/Pruebas-Conceptos-MVC-FTG.Data/bin/Debug/net9.0/Pruebas-Conceptos-MVC-FTG.Model.pdb

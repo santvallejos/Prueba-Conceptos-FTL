@@ -1,9 +1,0 @@
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.csproj.AssemblyReference.cache
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.GeneratedMSBuildEditorConfig.editorconfig
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.AssemblyInfoInputs.cache
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.AssemblyInfo.cs
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.csproj.CoreCompileInputs.cache
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.MvcApplicationPartsAssemblyInfo.cache
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.RazorAssemblyInfo.cache
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.RazorAssemblyInfo.cs
-/Users/rodrigopacheco/Documents/Projectos/Foo-Talent/Prueba-Conceptos-FTL/Pruebas-Conceptos-MVC-FTG/obj/Debug/net8.0/Pruebas-Conceptos-MVC-FTG.sourcelink.json
