@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Instalar dependencias requeridas por NativeAOT
 RUN apt-get update \
@@ -6,6 +6,10 @@ RUN apt-get update \
     clang zlib1g-dev llvm binutils \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Instalar herramienta dotnet-ef
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
 
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
@@ -18,6 +22,9 @@ RUN dotnet restore "Pruebas-Conceptos-MVC-FTG/Pruebas-Conceptos-MVC-FTG.csproj"
 COPY . . 
 WORKDIR "/src/Pruebas-Conceptos-MVC-FTG"
 
+# Aplicar migraciones antes de compilar
+RUN dotnet ef database update --no-build
+
 # Build y publicación normal sin AOT
 RUN dotnet publish "Pruebas-Conceptos-MVC-FTG.csproj" \
     -c $BUILD_CONFIGURATION \
@@ -26,15 +33,12 @@ RUN dotnet publish "Pruebas-Conceptos-MVC-FTG.csproj" \
     -o /app/publish
 
 # Imagen final
-FROM mcr.microsoft.com/dotnet/runtime-deps:9.0 AS final
+FROM mcr.microsoft.com/dotnet/runtime-deps:8.0 AS final
 WORKDIR /app
 EXPOSE 8080
 
 # Copiar los archivos del contenedor anterior
 COPY --from=build /app/publish .
-
-# Aplicar las migraciones a la base de datos
-RUN dotnet ef database update --no-build
 
 # Iniciar la aplicación
 ENTRYPOINT ["./Pruebas-Conceptos-MVC-FTG"]
