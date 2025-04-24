@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pruebas_Conceptos_MVC_FTG.Models
+namespace Pruebas_Conceptos_MVC_FTG.Model.Models
 {
     public class Paciente
     {

@@ -1,14 +1,24 @@
 using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using Pruebas_Conceptos_MVC_FTG.Model.Models;
 using Pruebas_Conceptos_MVC_FTG.Utils;
 
+//Added to use the JWT authentication
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
+
 // Add the following using directive at the top of the file to resolve the 'AddDbContext' method.
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Pruebas_Conceptos_MVC_FTG;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
 
-
+var key = "clave_super_secreta_para_firmar"; //CAMBIAR POR ALGO MÁS SEGURO JAJAJA solo de ensayo
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,12 +35,51 @@ builder.Services.AddDbContext<Pruebas_Conceptos_MVC_FTG_DbContext>(options =>
 // Add Swagger to the container
 builder.Services.AddSwaggerGen(c =>
 {
-  c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+  c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gestión de Pacientes API", Version = "v1" });
 
   //Include XML comments for better documentation
    var xmlFile = $"{System.AppDomain.CurrentDomain.FriendlyName}.xml";
    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-   c.IncludeXmlComments(xmlPath);
+    if (File.Exists(xmlPath))
+    {
+        c.IncludeXmlComments(xmlPath);
+    }
+});
+
+//Add authentication con JWT
+builder.Services.AddAuthentication(options =>
+{
+    // Se indica que JWT será el esquema de autenticación por defecto
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    // Configuración de validación del token
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        // Se pueden validar otras cosas, como el emisor y la audiencia
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,  // Asegura que el token no haya expirado
+        ValidateIssuerSigningKey = true, // Verifica la firma del token
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+    };
+});
+
+// Agregar el servicio de autenticación al contenedor de dependencias
+builder.Services.AddSingleton<JwtAuthService>();
+
+//Adding CORS para permitir solicitudes desde otros dominios
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        // Permitir solicitudes desde cualquier origen, método y encabezado
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
 });
 
 var app = builder.Build();
@@ -46,14 +95,16 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseCors();  // Habilita CORS
+app.UseAuthentication();  // Activa la autenticación JWT
+app.UseAuthorization(); // Activa la autorización
+
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gestión de pacientes API");
     c.RoutePrefix = string.Empty;
 });
-
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
@@ -63,11 +114,11 @@ app.MapControllerRoute(
 // Ensure database is created
 try
 {
-  using (var scope = app.Services.CreateScope())
+    using (var scope = app.Services.CreateScope())
   {
     var db = scope.ServiceProvider.GetRequiredService<Pruebas_Conceptos_MVC_FTG_DbContext>();
-    db.Database.EnsureCreated(); // O db.Database.CanConnect()
-    Console.WriteLine("✅ Conexión a la base de datos exitosa.");
+        db.Database.Migrate(); // Aplica las migraciones pendientes
+        Console.WriteLine("✅ Conexión a la base de datos exitosa.");
   }
 }
 catch (Exception ex)
@@ -75,25 +126,5 @@ catch (Exception ex)
   Console.WriteLine($"❌ Error al conectar con la base de datos: {ex.Message}");
 }
 
-// Example usage of the Usuario class
-var usuario = new Usuario(1, "Rodrigo", "rodrigo@example.com", "secreta123");
-
-// Verificar contraseña correcta
-bool accesoPermitido = usuario.VerificarContrasena("secreta123");
-Console.WriteLine($"¿Acceso permitido? {accesoPermitido}");
-
-// Verificar contraseña incorrecta
-bool accesoDenegado = usuario.VerificarContrasena("contraseñaIncorrecta");
-Console.WriteLine($"¿Acceso permitido? {accesoDenegado}");
-
-// Mostrar información del usuario
-Console.WriteLine($"Nombre: {usuario.Nombre}");
-Console.WriteLine($"Correo: {usuario.Correo}");
-Console.WriteLine($"Creado en: {usuario.FechaCreacion}");
-Console.WriteLine($"Último acceso: {usuario.FechaUltimoAcceso}");
-
-// Actualizar último acceso y mostrarlo
-usuario.ActualizarUltimoAcceso();
-Console.WriteLine($"Último acceso actualizado: {usuario.FechaUltimoAcceso}");
 
 app.Run();

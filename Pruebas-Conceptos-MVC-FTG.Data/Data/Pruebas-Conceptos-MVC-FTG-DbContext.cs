@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Pruebas_Conceptos_MVC_FTG.Models;
+using Pruebas_Conceptos_MVC_FTG.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +16,7 @@ namespace Pruebas_Conceptos_MVC_FTG.Data
 
         //Entidades
         public DbSet<Paciente> Pacientes { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         //Modelo a crear
         protected override void OnModelCreating(ModelBuilder modelBuilder)

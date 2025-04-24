@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
-using Pruebas_Conceptos_MVC_FTG.Models;
 using System.Text.Json;
 using Pruebas_Conceptos_MVC_FTG.Utils;
 using System.ComponentModel.DataAnnotations;
+using Pruebas_Conceptos_MVC_FTG.Model.Models;
 
 namespace Pruebas_Conceptos_MVC_FTG.Controllers
 {
@@ -12,20 +12,22 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
     /// Controlador API para manejar operaciones sobre pacientes.
     /// </summary>
     [Route("api/[controller]")]
-  [ApiController]
-  public class ApiController : ControllerBase
-  {
-    private readonly Pruebas_Conceptos_MVC_FTG_DbContext _context;
+    [ApiController]
+    public class PatientController : ControllerBase
+    {
+        private readonly Pruebas_Conceptos_MVC_FTG_DbContext _context;
 
-    public ApiController(Pruebas_Conceptos_MVC_FTG_DbContext context)
-    {
-      _context = context;
-    }
-     
-    // Endpoint para obtener la lista de pacientes
-    [HttpGet("pacientes")]
-    public async Task<IActionResult> GetPacientes()
-    {
+        public PatientController(Pruebas_Conceptos_MVC_FTG_DbContext context)
+        {
+            _context = context;
+        }
+
+        /// <summary>
+        /// Obtiene la lista de pacientes de la base de datos.
+        /// </summary>
+        [HttpGet("pacientes")]
+        public async Task<IActionResult> GetPacientes()
+        {
             try
             {
                 // Obtiene la lista de pacientes de la base de datos
@@ -78,7 +80,7 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
         }
 
         /// <summary>
-        /// Obtiene un paciente específico por su ID.
+        /// Obtiene un paciente especifico por su ID.
         /// </summary>
         /// <param name="id">ID del paciente a buscar.</param>
         /// <returns>Paciente encontrado o un mensaje de error.</returns>
@@ -176,7 +178,7 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
         }
 
         /// <summary>
-        /// Actualiza parcialmente la información de un paciente existente.
+        /// Actualiza parcialmente la informacion de un paciente existente.
         /// </summary>
         /// <param name="id">ID del paciente a actualizar.</param>
         /// <param name="camposActualizados">Campos a modificar.</param>
@@ -210,6 +212,12 @@ namespace Pruebas_Conceptos_MVC_FTG.Controllers
                 var objMerged = JsonUtils.MergeJson(docOriginal.RootElement, camposActualizados);
 
                 var pacienteModificado = JsonSerializer.Deserialize<Paciente>(objMerged.ToString());
+
+                // Verificar si pacienteModificado es nulo antes de pasar a ValidationContext
+                if (pacienteModificado == null)
+                {
+                    return BadRequest("No se pudo deserializar los datos del paciente.");
+                }
 
                 // Validación manual del modelo PATCH
                 var context = new ValidationContext(pacienteModificado, serviceProvider: null, items: null);

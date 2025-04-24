@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Pruebas_Conceptos_MVC_FTG.Models;
 using Pruebas_Conceptos_MVC_FTG.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Pruebas_Conceptos_MVC_FTG.Controllers;
 
