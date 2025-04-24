@@ -15,7 +15,7 @@ COPY ["Pruebas-Conceptos-MVC-FTG/Pruebas-Conceptos-MVC-FTG.csproj", "Pruebas-Con
 RUN dotnet restore "Pruebas-Conceptos-MVC-FTG/Pruebas-Conceptos-MVC-FTG.csproj"
 
 # Copiar el resto del código fuente
-COPY . .
+COPY . . 
 WORKDIR "/src/Pruebas-Conceptos-MVC-FTG"
 
 # Build y publicación normal sin AOT
@@ -29,5 +29,12 @@ RUN dotnet publish "Pruebas-Conceptos-MVC-FTG.csproj" \
 FROM mcr.microsoft.com/dotnet/runtime-deps:9.0 AS final
 WORKDIR /app
 EXPOSE 8080
+
+# Copiar los archivos del contenedor anterior
 COPY --from=build /app/publish .
+
+# Aplicar las migraciones a la base de datos
+RUN dotnet ef database update --no-build
+
+# Iniciar la aplicación
 ENTRYPOINT ["./Pruebas-Conceptos-MVC-FTG"]
