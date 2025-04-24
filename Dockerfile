@@ -23,7 +23,7 @@ COPY . .
 WORKDIR "/src/Pruebas-Conceptos-MVC-FTG"
 
 # Aplicar migraciones antes de compilar
-RUN dotnet ef database update --no-build
+RUN dotnet ef database update
 
 # Build y publicación normal sin AOT
 RUN dotnet publish "Pruebas-Conceptos-MVC-FTG.csproj" \
