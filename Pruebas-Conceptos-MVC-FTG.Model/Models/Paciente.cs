@@ -36,11 +36,11 @@ namespace Pruebas_Conceptos_MVC_FTG.Model.Models
         [RegularExpression(@"^(F|M|O)$", ErrorMessage = "Sexo inválido. Usa F, M u O.")]
         public string Sex { get; set; } = string.Empty;
 
-       
+        [Required(ErrorMessage = "El email es obligatorio.")]
         [EmailAddress(ErrorMessage = "Correo no válido.")]
         public string? Email { get; set; }
 
-
+        [Required(ErrorMessage = "El número de contacto es obligatoria.")]
         [Phone(ErrorMessage = "Número de teléfono no válido.")]
         public string? Phone { get; set; }
 

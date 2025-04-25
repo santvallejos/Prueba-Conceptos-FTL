@@ -1,23 +1,25 @@
-# Ignorar carpetas de compilación
+# Ignorar carpetas de compilaciï¿½n
 **/bin/
 **/obj/
 **/Debug/
 
-# Archivos y carpetas de configuración de Visual Studio
+# Archivos y carpetas de configuraciï¿½n de Visual Studio
 .vs/
 *.user
 *.suo
 
-# Archivos generados automáticamente por MSBuild
+# Archivos generados automï¿½ticamente por MSBuild
 *.GeneratedMSBuildEditorConfig.editorconfig
 *.AssemblyReference.cache
 *.AssemblyInfoInputs.cache
 *.assets.cache
 
-# Archivos de caché temporales
+*node_modules/
+
+# Archivos de cachï¿½ temporales
 *.cache
 
-# Archivos innecesarios de configuración
+# Archivos innecesarios de configuraciï¿½n
 *.dbmdl
 *.pdb
 
