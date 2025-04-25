@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,15 +60,34 @@ namespace Pruebas_Conceptos_MVC_FTG.Model.Models
         
 
 
-        public Paciente(int id, string name, string surname, DateTime birthdate, int identification, string diagnosis, string institution)
+        public Paciente(int id, string name, string surname, DateTime birthdate, int identification, string sex, string modality, string email, string phone)
         {
             Id = id;
             Name = name;
             Surname = surname;
             Birthdate = birthdate;
             Identification = identification;
+            Sex = sex;
+            Modality = modality;
+            Email = email;
+            Phone = phone;
+            AdmissionDate = DateTime.UtcNow;
+        }
+
+        public Paciente(int id, string name, string surname, DateTime birthdate, int identification, string sex, string modality, string diagnosis, string institution, string email, string phone)
+        {
+            Id = id;
+            Name = name;
+            Surname = surname;
+            Birthdate = birthdate;
+            Identification = identification;
+            Sex = sex;
+            Modality = modality;
             Diagnosis = diagnosis;
             Institution = institution;
+            Email = email;
+            Phone = phone;
+            AdmissionDate = DateTime.UtcNow;
         }
 
         [NotMapped]

@@ -25,6 +25,7 @@
 		<RootNamespace>Pruebas_Conceptos_MVC_FTG</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<LaunchBrowser>true</LaunchBrowser>
 	</PropertyGroup>
 
 </Project>

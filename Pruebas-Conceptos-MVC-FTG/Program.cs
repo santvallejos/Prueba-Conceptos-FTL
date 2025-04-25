@@ -21,6 +21,8 @@ using Microsoft.Extensions.Hosting;
 var key = "clave_super_secreta_para_firmar"; //CAMBIAR POR ALGO MÁS SEGURO JAJAJA solo de ensayo
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -83,6 +85,9 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+// Aquí agregamos la línea para escuchar en todas las interfaces de red
+app.Urls.Add("http://0.0.0.0:80"); // Escucha en todas las interfaces de red (0.0.0.0)
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
