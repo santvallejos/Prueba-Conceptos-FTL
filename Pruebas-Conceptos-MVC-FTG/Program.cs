@@ -46,6 +46,11 @@ builder.Services.AddSwaggerGen(c =>
     {
         c.IncludeXmlComments(xmlPath);
     }
+
+    c.AddServer(new OpenApiServer
+    {
+        Url = "https://prueba-conceptos-ftl-production.up.railway.app"
+    });
 });
 
 //Add authentication con JWT
