@@ -75,7 +75,7 @@ builder.Services.AddSingleton<JwtAuthService>();
 //Adding CORS para permitir solicitudes desde otros dominios
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         // Permitir solicitudes desde cualquier origen, método y encabezado
         policy.AllowAnyOrigin()
@@ -85,9 +85,6 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-
-// Aquí agregamos la línea para escuchar en todas las interfaces de red
-app.Urls.Add("http://0.0.0.0:80"); // Escucha en todas las interfaces de red (0.0.0.0)
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -100,7 +97,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseCors();  // Habilita CORS
+app.UseCors("AllowAll");  // Habilita CORS
 app.UseAuthentication();  // Activa la autenticación JWT
 app.UseAuthorization(); // Activa la autorización
 
